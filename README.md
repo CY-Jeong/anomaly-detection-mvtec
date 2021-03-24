@@ -19,7 +19,7 @@ Tensorflow implementation of **[MVTEC-AD](https://github.com/AdneneBoumessouer/M
 ## Prerequisites
 - Linux or macOS
 - python3+
-- Pytorch 1.4+
+- Pytorch 0.4+
 
 ## installation
 ```bash
