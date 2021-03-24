@@ -6,11 +6,11 @@ It has only simple layers but if you want to look out mvtec paper click [here](h
 Tensorflow implementation of **[MVTEC-AD](https://github.com/AdneneBoumessouer/MVTec-Anomaly-Detection)** which is implemetation in mvtec paper linked above.
 
 
-- Simple CNN models(AutoEncoder)
+## Simple CNN models(AutoEncoder)
 
-<img src='imgs/layers_AE.png' align="left" width=384><br>
+<img src='imgs/layers_AE.png' align="left" width=384>
 
-- Adversary Variational AutoEncoder
+## Adversary Variational AutoEncoder
 
 <img src='imgs/layers_AAE.png' align="right" width=384>
 
