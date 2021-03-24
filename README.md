@@ -8,11 +8,11 @@ Tensorflow implementation of **[MVTEC-AD](https://github.com/AdneneBoumessouer/M
 
 ## Simple CNN models(AutoEncoder)
 
-<img src='imgs/layers_AE.png' align="left" width=384>
+<img src='imgs/layers_AE.png' align="left" width=1000>
 
 ## Adversary Variational AutoEncoder
 
-<img src='imgs/layers_AAE.png' align="right" width=384>
+<img src='imgs/layers_AAE.png' align="right" width=1000>
 
 ## Prerequisites
 - python3+
