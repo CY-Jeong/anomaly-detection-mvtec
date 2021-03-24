@@ -41,7 +41,7 @@ python test.py
 
 # Results
 
-<img src='imgs/layers_AE.png' align="left" width=384>
+<img src='imgs/layers_AE.png' width=384>
 
 # Related Projects
 [Anogan](https://arxiv.org/pdf/1703.05921.pdf)|[VAE-Anomaly-Detection](http://dm.snu.ac.kr/static/docs/TR/SNUDM-TR-2015-03.pdf)
