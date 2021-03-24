@@ -29,7 +29,7 @@ def get_transform(opt):
     """Transforms images"""
     transform = []
     if opt.rotate == True:
-        transform.append(transforms.RandomRotation(2.8)) # .05 rad
+        transform.append(transforms.RandomRotation(0.5))
     transform.append(transforms.ColorJitter(brightness=opt.brightness))
     transform.append(transforms.Resize((opt.cropsize, opt.cropsize), interpolation=2))
     transform.append(transforms.ToTensor())

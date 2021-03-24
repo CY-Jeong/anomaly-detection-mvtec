@@ -19,6 +19,6 @@ class TrainOptions(BaseOptions):
         parser.add_argument('--mode', type=str, default='train', help='train or pretrained mode')
         parser.add_argument('--num_threads', default=4, type=int, help='# threads for loading data')
         parser.add_argument('--no_dropout', action='store_true', help='no dropout')
-        parser.add_argument('--rotate', action='store_true', help='rotate image in tranforms')
+        parser.add_argument('--rotate', action='store_false', help='rotate image in tranforms')
         parser.add_argument('--brightness', default=0.1, type=float, help='change brightness of images in tranforms')
         return parser
