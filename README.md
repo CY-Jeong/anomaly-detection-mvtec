@@ -24,19 +24,19 @@ Tensorflow implementation of **[MVTEC-AD](https://github.com/AdneneBoumessouer/M
 ## Usage
 First, download MVTEC datasets.
 ```bash
-mkdir Downloads
-cd Downloads
+mkdir [data location]
+cd [data location]
 wget ftp://guest:GU%2E205dldo@ftp.softronics.ch/mvtec_anomaly_detection/mvtec_anomaly_detection.tar.xz
 tar Jxvf mvtec_anomaly_detection.tar.xz
 ```
 To train a model
 ```bash
-python train.py
+python train.py --data_dir [data location] --save_dir [save location]
 ```
 
 To test a model
 ```bash
-python test.py
+python test.py --data_dir [data location] --save_dir [save location]
 ```
 
 # Results
