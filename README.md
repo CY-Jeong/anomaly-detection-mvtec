@@ -1,6 +1,6 @@
 # Anomaly-Detection
 Pytorch implemetation of **Anomaly Detection** which detect not normal images in industrial datasets [mvtec](https://www.mvtec.com/)<br>
-It has only simple layers but if you want to look out mvtec paper click [here](https://openaccess.thecvf.com/content_CVPR_2019/papers/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.pdf)
+It has only simple layers but if you want to look out mvtec paper click [here](https://openaccess.thecvf.com/content_CVPR_2019/papers/Bergmann_MVTec_AD_--_A_Comprehensive_Real-World_Dataset_for_Unsupervised_Anomaly_CVPR_2019_paper.pdf).<br>
 Actually I didn't work well with mvtecAD as I think finding automatic threshold in finetune stage.
 So this code is implemeted only manualy fix the threshold. That's weekness.
 
