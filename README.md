@@ -8,7 +8,7 @@ Tensorflow implementation of **[MVTEC-AD](https://github.com/AdneneBoumessouer/M
 
 - Simple CNN models(AutoEncoder)
 
-<img src='imgs/layers_AE.png' align="right" width=384>
+<img src='imgs/layers_AE.png' align="left" width=384>
 
 - Adversary Variational AutoEncoder
 
@@ -39,5 +39,5 @@ python test.py
 
 # Results
 
-<img src='imgs/layers_AE.png' align="right" width=384>
+<img src='imgs/layers_AE.png' align="left" width=384>
 
