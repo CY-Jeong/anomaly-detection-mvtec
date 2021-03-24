@@ -17,9 +17,17 @@ Tensorflow implementation of **[MVTEC-AD](https://github.com/AdneneBoumessouer/M
 <img src='imgs/layers_AAE.png' align="right" width=1000 height=300>
 
 ## Prerequisites
+- Linux or macOS
 - python3+
 - Pytorch 1.4+
-- environments.yml
+
+## installation
+```bash
+git clone https://github.com/CY-Jeong/anomaly-detection-mvtec.git
+cd anomaly-detection-mvtec
+```
+- Pip users, pip install -r requirements.txt 
+- Conta users, conda env create -f environment.yml
 
 ## Usage
 First, download MVTEC datasets.
