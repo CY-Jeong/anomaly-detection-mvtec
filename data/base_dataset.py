@@ -5,7 +5,7 @@ class BaseDataset(data.Dataset, ABC):
     """This class is an abstract base class for datasets"""
     def __init__(self, opt):
         self.args = opt
-        self.root = opt.datadir
+        self.root = opt.data_dir
 
     @abstractmethod
     def __len__(self):

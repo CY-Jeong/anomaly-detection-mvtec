@@ -14,7 +14,7 @@ class BaseModel(ABC):
         self.device = torch.device(f'cuda:{self.gpu[0]}') if self.gpu else torch.device('cpu')
         self.optimizers = []
         self.networks = []
-        self.save_dir = os.path.join(opt.save_dir, opt.model)
+        self.save_dir = os.path.join(opt.save_dir, opt.object)
         if self.opt.mode == 'Train':
             self.isTrain = True
         elif self.opt.mode == 'Pretrained' or self.opt.mode == 'Test':
@@ -47,10 +47,10 @@ class BaseModel(ABC):
                 param.requires_grad = requires_grad
 
     def get_generated_imags(self):
-        visual_imgs = OrderedDict()
+        visual_imgs = None
         for name in self.visual_names:
             if isinstance(name, str):
-                visual_imgs[name] = getattr(self, name)
+                visual_imgs = getattr(self, name)
         return visual_imgs
 
     def eval(self):

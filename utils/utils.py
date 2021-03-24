@@ -35,6 +35,7 @@ def convert2img(image, imtype=np.uint8):
             return image
         image = image.cpu().numpy()
         assert len(image.squeeze().shape) < 4
+    if image.dtype != np.uint8:
         image = (np.transpose(image.squeeze(), (1, 2, 0)) * 0.5 + 0.5) * 255
     return image.astype(imtype)
 
@@ -50,12 +51,13 @@ def plt_show(img):
 
 
 def compare_images(real_img, generated_img, threshold=0.2):
-    real_img = np.transpose(real_img.cpu().detach().numpy()[0], (1, 2, 0)) * 0.5 + 0.5
-    generated_img = (
-        np.transpose(generated_img.cpu().detach().numpy()[0], (1, 2, 0)) * 0.5 + 0.5
-    )
+    generated_img = generated_img.type_as(real_img)
     diff_img = np.abs(generated_img - real_img)
+    real_img = convert2img(real_img)
+    generated_img = convert2img(generated_img)
+    diff_img = convert2img(diff_img)
 
+    threshold = (threshold*0.5+0.5)*255
     diff_img[diff_img <= threshold] = 0
 
     anomaly_img = np.zeros_like(real_img)

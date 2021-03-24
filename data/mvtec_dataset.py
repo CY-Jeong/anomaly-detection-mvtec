@@ -11,7 +11,7 @@ class MvtecDataset(BaseDataset):
     def __init__(self, opt):
         BaseDataset.__init__(self, opt)
         self.img_size = opt.img_size
-        self.train_dir = os.path.join(opt.datadir, opt.object, opt.mode)
+        self.train_dir = os.path.join(opt.data_dir, opt.object, opt.mode)
         self.train_paths = get_datapaths(self.train_dir)
         self.train_size = len(self.train_paths)
         self.transform = get_transform(opt)

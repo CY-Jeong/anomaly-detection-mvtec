@@ -11,9 +11,9 @@ class BaseOptions():
 
     def initialize(self, parser):
         """Defining arguments used in both training and testing"""
-        parser.add_argument('--datadir', type=str, default = '/data/cyj/mvtec', help='path to dataset')
+        parser.add_argument('--data_dir', type=str, default = '/data/cyj/mvtec', help='path to dataset')
         parser.add_argument('--gpu', type=str, default='4,5', help='gpu number : e.g. 0  0,1,2, 0,2. use -1 for CPU')
-        parser.add_argument('--save_dir', type=str, default='/data/cyclegan/checkpoints', help='models are saved here')
+        parser.add_argument('--save_dir', type=str, default='/data/cyj/mvtec/', help='models are saved here')
         parser.add_argument('--model', type=str, default='cae', help='choose which model to use')
         parser.add_argument('--channels', type=int, default=3, help='# of image channels 3:RGB, 1:gray-scale')
         parser.add_argument('--img_size', type=int, default=256, help='img size of input and output for networks')
