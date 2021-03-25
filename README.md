@@ -49,12 +49,12 @@ python test.py --data_dir [data location] --save_dir [save location]
 
 # Results
 
-<img src='imgs/result1.png' width=900 height=300>
-<img src='imgs/result2.png' width=900 height=300>
-<img src='imgs/result3.png' width=900 height=300>
-<img src='imgs/result4.png' width=900 height=300>
-<img src='imgs/result5.png' width=900 height=300>
-<img src='imgs/result6.png' width=900 height=300>
+<img src='imgs/result1.png' width=600 height=300>
+<img src='imgs/result2.png' width=600 height=300>
+<img src='imgs/result3.png' width=600 height=300>
+<img src='imgs/result4.png' width=600 height=300>
+<img src='imgs/result5.png' width=600 height=300>
+<img src='imgs/result6.png' width=600 height=300>
 
 # Related Projects
 [Anogan](https://arxiv.org/pdf/1703.05921.pdf)|[VAE-Anomaly-Detection](http://dm.snu.ac.kr/static/docs/TR/SNUDM-TR-2015-03.pdf)
