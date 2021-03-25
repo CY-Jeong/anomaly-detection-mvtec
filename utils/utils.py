@@ -12,9 +12,9 @@ def mkdirs(paths):
     if isinstance(paths, list):
         for path in paths:
             if not os.path.exists(path):
-                os.mkdir(path)
+                os.makedirs(path)
     elif not os.path.exists(paths):
-        os.mkdir(paths)
+        os.makedirs(paths)
 
 
 def save_images(images, image_paths, data):
