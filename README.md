@@ -14,7 +14,7 @@ Tensorflow implementation of **[MVTEC-AD](https://github.com/AdneneBoumessouer/M
 
 ## Adversary Variational AutoEncoder
 
-<img src='imgs/layers_AAE.png' align="right" width=1000 height=300>
+<img src='imgs/layers_AAE.png' align="left" width=1000 height=300>
 
 ## Prerequisites
 - Linux or macOS
@@ -49,7 +49,12 @@ python test.py --data_dir [data location] --save_dir [save location]
 
 # Results
 
-<img src='imgs/layers_AE.png' width=384>
+<img src='imgs/result1.png' width=384>
+<img src='imgs/result2.png' width=384>
+<img src='imgs/result3.png' width=384>
+<img src='imgs/result4.png' width=384>
+<img src='imgs/result5.png' width=384>
+<img src='imgs/result6.png' width=384>
 
 # Related Projects
 [Anogan](https://arxiv.org/pdf/1703.05921.pdf)|[VAE-Anomaly-Detection](http://dm.snu.ac.kr/static/docs/TR/SNUDM-TR-2015-03.pdf)
