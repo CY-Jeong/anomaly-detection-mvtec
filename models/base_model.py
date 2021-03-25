@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from . import get_scheduler
-
+from utils import utils
 
 import os
 import torch
@@ -91,6 +91,8 @@ class BaseModel(ABC):
         save_decoder_filename = f'{self.model_name}_d.pth'
         save_encoder_path = os.path.join(self.save_dir, save_encoder_filename)
         save_decoder_path = os.path.join(self.save_dir, save_decoder_filename)
+        utils.mkdir(save_encoder_path)
+        utils.mkdir(save_encoder_path)
         net_d = getattr(self, 'decoder')
         net_e = getattr(self, 'encoder')
 
