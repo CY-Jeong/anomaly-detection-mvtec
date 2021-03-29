@@ -50,7 +50,7 @@ def plt_show(img):
     plt.show()
 
 
-def compare_images(real_img, generated_img, threshold=0.2):
+def compare_images(real_img, generated_img, threshold=0.4):
     generated_img = generated_img.type_as(real_img)
     diff_img = np.abs(generated_img - real_img)
     real_img = convert2img(real_img)
@@ -62,7 +62,8 @@ def compare_images(real_img, generated_img, threshold=0.2):
 
     anomaly_img = np.zeros_like(real_img)
     anomaly_img[:, :, :] = real_img
-    anomaly_img[:, :, 0] = anomaly_img[:, :, 0] + 10.0 * np.mean(diff_img, axis=2)
+    anomaly_img[np.where(diff_img>0)[0], np.where(diff_img>0)[1]] = [200, 0, 0]
+    #anomaly_img[:, :, 0] = anomaly_img[:, :, 0] + 10.0 * np.mean(diff_img, axis=2)
 
     fig, plots = plt.subplots(1, 4)
 
