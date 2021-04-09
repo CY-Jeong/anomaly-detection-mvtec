@@ -1,6 +1,5 @@
 import torch.nn as nn
 
-#################---AutoEncoder---###########################
 class Decoder(nn.Module):
     def __init__(self, img_shape, latent_dim):
         super().__init__()
@@ -87,8 +86,8 @@ class Encoder(nn.Module):
         )
 
         self.last_layer = nn.Sequential(
-            nn.Linear(1024, 100),
-            nn.Linear(100, 100)
+            nn.Linear(1024, latent_dim),
+            nn.Linear(latent_dim, latent_dim)
         )
 
 
@@ -99,6 +98,11 @@ class Encoder(nn.Module):
         features = features.view(features.shape[0], -1, 1, 1)
         return features
 
-########################################################################################
 
+class Discriminator(nn.Module):
 
+    def __init__(self, latent_dim):
+        super(Discriminator, self).__init__()
+        self.linear1 = nn.Linear(latent_dim, )
+
+    def forward(self):
