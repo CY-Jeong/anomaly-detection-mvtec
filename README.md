@@ -21,13 +21,13 @@ Tensorflow implementation of **[MVTEC-AD](https://github.com/AdneneBoumessouer/M
 - python3+
 - Pytorch 0.4+
 
-## installation
+## Installation
 ```bash
 git clone https://github.com/CY-Jeong/anomaly-detection-mvtec.git
 cd anomaly-detection-mvtec
 ```
 - Pip users, ```pip install -r requirements.txt```
-- Conta users, ```conda env create -f environment.yml```
+- Conda users, ```conda env create -f environment.yml```
 
 ## Usage
 First, download MVTEC datasets.
