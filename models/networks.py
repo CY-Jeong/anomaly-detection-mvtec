@@ -99,10 +99,10 @@ class Encoder(nn.Module):
         return features
 
 
-class Discriminator(nn.Module):
-
-    def __init__(self, latent_dim):
-        super(Discriminator, self).__init__()
-        self.linear1 = nn.Linear(latent_dim, )
-
-    def forward(self):
+# class Discriminator(nn.Module):
+#
+#     def __init__(self, latent_dim):
+#         super(Discriminator, self).__init__()
+#         self.linear1 = nn.Linear(, )
+#
+#     def forward(self):
