@@ -45,12 +45,12 @@ tar Jxvf mvtec_anomaly_detection.tar.xz
 ```
 To train a model
 ```bash
-python train.py --data_dir [data location] --save_dir [save location]
+python train.py --data_dir [data location] --save_dir [save location] --model [aae | cae]
 ```
-
+If you choose CAE, the n_epochs should be 1000 more, or 60 epochs in aae.
 To test a model
 ```bash
-python test.py --data_dir [data location] --save_dir [save location]
+python test.py --data_dir [data location] --save_dir [save location] --model [aae | cae]
 ```
 
 # Results
