@@ -21,7 +21,7 @@ class CAE(BaseModel):
         self.opt = opt
         img_size = (self.opt.channels, self.opt.img_size, self.opt.img_size)
         latent = self.opt.latent
-        self.encoder = init_net(networks.Encoder(img_size, latent).cuda(), gpu = opt.gpu, mode = opt.mode)
+        self.encoder = init_net(networks.Encoder(latent).cuda(), gpu = opt.gpu, mode = opt.mode)
         # initialize encoder networks doing data parallel and init_weights
         self.decoder = init_net(networks.Decoder(img_size, latent).cuda(), gpu = opt.gpu, mode = opt.mode)
         # initialize decoder networks doing data parallel and init_weights
@@ -29,7 +29,7 @@ class CAE(BaseModel):
         self.criterion = torch.nn.MSELoss()
         self.visual_names = ['generated_imgs']
         self.model_name = self.opt.model
-        self.net_name = ['encoder', 'decoder']
+        self.loss_name = ['loss']
 
         if self.opt.mode == 'train':# if mode is train, we have to set optimizer and requires grad is true
             self.optimizer_e = torch.optim.Adam(self.encoder.parameters(), lr=self.opt.lr,
@@ -39,8 +39,6 @@ class CAE(BaseModel):
             self.optimizers.append(self.optimizer_e)
             self.optimizers.append(self.optimizer_d)
             self.set_requires_grad(self.decoder, self.encoder, requires_grad=True)
-
-
 
     def forward(self):
         features = self.encoder(self.real_imgs)

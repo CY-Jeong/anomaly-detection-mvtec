@@ -27,7 +27,7 @@ if __name__ == "__main__":
     model = create_model(opt)       # create model (AE, AAE)
     model.setup(opt)                # set model : if mode is 'train', define schedulers and if mode is 'test', load saved networks
     total_iters = 0
-    loss_name = ["loss"]            # loss name for naming
+    loss_name = model.loss_name            # loss name for naming
     for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):
         epoch_start_time = time.time()                      # start epoch time
         model.update_learning_rate(epoch)                   # update learning rate change with schedulers
@@ -42,7 +42,9 @@ if __name__ == "__main__":
         if epoch % opt.print_epoch_freq == 0:               # model loss, time print frequency
             losses = model.get_current_losses(*loss_name)
             epoch_time = time.time() - epoch_start_time
-            message = f"epoch : {epoch} | total_iters : {total_iters} | epoch_time:{epoch_time:.3f} | loss:{losses[0]}"
+            message = f"epoch : {epoch} | total_iters : {total_iters} | epoch_time:{epoch_time:.3f}"
+            for k,v in losses.items():
+                message += f" | {k}:{v}"
             print(message)
         if epoch % opt.save_epoch_freq == 0:                # save model frequency
             print(
@@ -50,4 +52,4 @@ if __name__ == "__main__":
                 % (epoch, total_iters)
             )
             model.save_networks()
-            plt_show(model.generated_imgs)
+            plt_show(model.generated_imgs[:3])

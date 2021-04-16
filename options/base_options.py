@@ -14,7 +14,7 @@ class BaseOptions():
         parser.add_argument('--data_dir', type=str, default = '/data/cyj/mvtec', help='path to dataset')
         parser.add_argument('--gpu', type=str, default='0', help='gpu number : e.g. 0  0,1,2, 0,2. use -1 for CPU')
         parser.add_argument('--save_dir', type=str, default='/data/cyj/mvtec/', help='models are saved here')
-        parser.add_argument('--model', type=str, default='cae', help='choose which model to use')
+        parser.add_argument('--model', type=str, default='aae', help='choose which model to use')
         parser.add_argument('--channels', type=int, default=3, help='# of image channels 3:RGB, 1:gray-scale')
         parser.add_argument('--img_size', type=int, default=256, help='img size of input and output for networks')
         parser.add_argument('--latent', type=int, default=100, help='the letent vector size for networks')
@@ -23,7 +23,7 @@ class BaseOptions():
         parser.add_argument('--dataset', type=str, default='mvtec', help='chooses how datasets are loaded.')
         parser.add_argument('--verbose', action='store_true', help='if specified, print more debugging information')
         parser.add_argument('--cropsize', type=int, default=256, help='crop image size')
-        parser.add_argument('--object', type=str, default='capsule', help='the object for training')
+        parser.add_argument('--object', type=str, default='metal_nut', help='the object for training')
         return parser
 
     def parse(self):

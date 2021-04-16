@@ -24,10 +24,6 @@ class BaseModel(ABC):
         pass
 
     @abstractmethod
-    def forward(self):
-        pass
-
-    @abstractmethod
     def train(self):
         pass
     @abstractmethod
@@ -127,9 +123,9 @@ class BaseModel(ABC):
 
 
     def get_current_losses(self, *loss_name):
-        loss = []
+        loss = {}
         for name in loss_name:
-            loss.append(float(getattr(self, name)))  # float(...) works for both scalar tensor and float number
+            loss[name] = (float(getattr(self, name)))  # float(...) works for both scalar tensor and float number
         return loss
 
 
