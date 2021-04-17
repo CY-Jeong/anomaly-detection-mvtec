@@ -18,7 +18,7 @@ Tensorflow implementation of **[MVTEC-AD](https://github.com/AdneneBoumessouer/M
 
 <img src='imgs/layers_AE.png' width=700 height=300>
 
-## Adversary Variational AutoEncoder(preparing)
+## Adversary Variational AutoEncoder
 
 <img src='imgs/layers_AAE.png' width=700 height=300>
 
