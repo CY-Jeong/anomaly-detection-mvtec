@@ -1,0 +1,31 @@
+----------------------Arguments-------------------------
+                 data_dir: ./data                        
+                      gpu: 0                             
+                 save_dir: ./result                      
+                    model: aae                           
+                 channels: 3                             
+                 img_size: 256                           
+                   latent: 100                           
+                init_type: normal                        
+                init_gain: 0.02                          
+                  dataset: mvtec                         
+                  verbose: 0                             
+                 cropsize: 256                           
+                   object: metal_nut                     
+         print_epoch_freq: 1                             
+          save_epoch_freq: 50                            
+              epoch_count: 0                             
+                 n_epochs: 1000                          
+           n_epochs_decay: 500                           
+                    beta1: 0.5                           
+                    beta2: 0.999                         
+                       lr: 0.0002                        
+                lr_policy: linear                        
+           lr_decay_iters: 50                            
+               batch_size: 8                             
+                     mode: train                         
+              num_threads: 0                             
+               no_dropout: 0                             
+                   rotate: 1                             
+               brightness: 0.1                           
+---------------------End--------------------------------
